@@ -1,8 +1,8 @@
-# docker-node-express
+# docker-node-express-mysql
 
 ## Description
 
-Simple node express-generator running on docker w/ docker-compose for development
+Simple node express-generator running on docker w/ docker-compose for development with mySql
 
 ## How to run
 
