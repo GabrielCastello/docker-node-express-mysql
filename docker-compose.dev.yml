@@ -1,15 +1,23 @@
-version: '3'
+version: "3"
 
 services:
   docker_node_mysql:
     image: docker_node_mysql
-    build: 
-        context: .
-        dockerfile: ./docker/development/Dockerfile
-    volumes: 
+    build:
+      context: .
+      dockerfile: ./docker/development/Dockerfile
+    volumes:
       - ./:/usr/src/app
       - /usr/src/app/node_modules
     environment:
       NODE_ENV: development
     ports:
       - 3000:3000
+  db:
+    image: mysql:5.7
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    ports: 
+      - 43306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: example
