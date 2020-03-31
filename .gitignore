@@ -1,4 +1,5 @@
 .vscode
+mysql
 # Logs
 logs
 *.log
